@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { IoMenuOutline } from "react-icons/io5";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ const Header: React.FC = () => {
           onClick={() => setIsOpen(true)}
           className="md:hidden text-[#6D1A5F] focus:outline-none w-10 h-10 flex items-center justify-center hover:bg-[#F7A900]/10 rounded-full"
         >
-          <i className="ri-menu-line ri-2x text-black" />
+          <IoMenuOutline className='h-6 w-6' />
         </button>
       </div>
       
