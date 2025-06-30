@@ -45,7 +45,7 @@ const Header: React.FC = () => {
             className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2"
           >
             <i className="ri-whatsapp-line ri-lg" />
-            WhatsApp
+            Nous Contacter
           </a>
         </nav>
         
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
               className="mt-4 bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
               <i className="ri-whatsapp-line ri-lg" />
-              WhatsApp
+              Nous Contacter
             </a>
           </div>
         </div>
