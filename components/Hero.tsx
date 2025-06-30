@@ -9,8 +9,8 @@ const Hero: React.FC = () => {
       {/* Image de fond avec overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://img.freepik.com/photos-gratuite/concept-voyage-points-repere_23-2149153256.jpg?semt=ais_hybrid&w=740"
-          alt="Voyage autour du monde"
+  src="/img/hero.png"
+alt="Voyage autour du monde"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#7B1F6B]/90 via-[#7B1F6B]/50 to-transparent" />
