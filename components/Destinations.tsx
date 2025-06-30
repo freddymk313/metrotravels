@@ -7,7 +7,7 @@ const destinations = [
     title: "Dubaï",
     subtitle: "Luxe et modernité",
     price: "$1,200",
-    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.areion24.news%2F2022%2F11%2F10%2Fdubai-rencontre-avec-une-ville-mondiale-dun-nouveau-type%2F&psig=AOvVaw0IDnxQezAaoOWfRGkKvv-e&ust=1751394051830000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj-9cLhmY4DFQAAAAAdAAAAABAE",
+    image: "https://www.areion24.news/wp-content/uploads/2022/11/MO53-80.jpg",
     description:
       "Explorez la ville futuriste avec ses gratte-ciels emblématiques, ses centres commerciaux luxueux et ses plages paradisiaques.",
   },
@@ -15,7 +15,7 @@ const destinations = [
     title: "Zanzibar",
     subtitle: "Plages paradisiaques",
     price: "$800",
-    image: "/images/zanzibar.jpg",
+    image: "https://wereldreizigers.nl/wp-content/uploads/2021/08/the-rock-zanzibar-4-scaled.jpg",
     description:
       "Détendez-vous sur les plus belles plages de l’océan Indien, découvrez Stone Town et sa riche histoire culturelle.",
   },
@@ -23,7 +23,7 @@ const destinations = [
     title: "Turquie",
     subtitle: "Histoire et culture",
     price: "$950",
-    image: "/images/turquie.jpg",
+    image: "https://image.urlaubspiraten.de/640/image/upload/f_auto,q_auto/v1603291894/mediavault_images/ruz2bi5ccvsf8zpnohoj.jpg",
     description:
       "Immergez-vous dans l’histoire millénaire d’Istanbul, visitez la Cappadoce et ses paysages lunaires uniques.",
   },
@@ -31,7 +31,7 @@ const destinations = [
     title: "Afrique du Sud",
     subtitle: "Safari et aventure",
     price: "$1,100",
-    image: "/images/afrique.jpg",
+    image: "https://www.terdav.com/Content/img/mag/vignettes/grande/1549.jpg",
     description:
       "Vivez l’aventure ultime avec des safaris exceptionnels, visitez Cape Town et découvrez la route des vins.",
   },
