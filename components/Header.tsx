@@ -32,13 +32,13 @@ const Header: React.FC = () => {
         
         <nav className="hidden md:flex items-center space-x-6">
           {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
-            <a 
+            <Link 
               key={section} 
               href={`#${section}`} 
               className="nav-link font-medium text-gray-700 hover:text-[#7B1F6B] transition-colors capitalize px-3 py-2 rounded-md hover:bg-[#F7A900]/10"
             >
               {section.replace('about', 'À propos')}
-            </a>
+            </Link>
           ))}
           <a 
             href="#contact" 
@@ -82,14 +82,14 @@ const Header: React.FC = () => {
           
           <div className="flex flex-col p-4">
             {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
-              <a
+              <Link
                 key={section}
                 href={`#${section}`}
                 className="py-3 px-4 text-gray-700 font-medium hover:text-[#7B1F6B] hover:bg-[#F7A900]/10 transition-colors rounded-md"
                 onClick={() => setIsOpen(false)}
               >
                 {section.replace('about', 'À propos')}
-              </a>
+              </Link>
             ))}
             
             <a
