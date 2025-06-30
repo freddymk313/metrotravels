@@ -7,7 +7,7 @@ const destinations = [
     title: "Dubaï",
     subtitle: "Luxe et modernité",
     price: "$1,200",
-    image: "/images/dubai.jpg",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.areion24.news%2F2022%2F11%2F10%2Fdubai-rencontre-avec-une-ville-mondiale-dun-nouveau-type%2F&psig=AOvVaw0IDnxQezAaoOWfRGkKvv-e&ust=1751394051830000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj-9cLhmY4DFQAAAAAdAAAAABAE",
     description:
       "Explorez la ville futuriste avec ses gratte-ciels emblématiques, ses centres commerciaux luxueux et ses plages paradisiaques.",
   },
