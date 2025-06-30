@@ -20,7 +20,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Stats overlay */}
-            <div className="hidden md:absolute -bottom-6 -right-6 bg-[#7B1F6B] text-white p-6 rounded-2xl shadow-lg w-3/4">
+            <div className="hidden lg:block absolute -bottom-6 -right-6 bg-[#7B1F6B] text-white p-6 rounded-2xl shadow-lg w-3/4">
               <div className="flex items-center gap-4">
                 <RiMedalLine className="text-4xl text-[#FFD600]" />
                 <div>
