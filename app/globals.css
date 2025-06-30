@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+   --metro-yellow: #FFD600;
+  --metro-orange: #F7A900;
+  --metro-pink: #E03C69;
+  --metro-purple: #7B1F6B;
+  --metro-gold-text: #CFA32F;
+  --metro-purple-text: #6D1A5F;
 }
 
 @theme inline {
