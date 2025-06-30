@@ -53,13 +53,13 @@ const Header: React.FC = () => {
           onClick={() => setIsOpen(true)}
           className="md:hidden text-[#6D1A5F] focus:outline-none w-10 h-10 flex items-center justify-center hover:bg-[#F7A900]/10 rounded-full"
         >
-          <i className="ri-menu-line ri-2x" />
+          <i className="ri-menu-line ri-2x text-black" />
         </button>
       </div>
       
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+        className={`fixed inset-0 z-50 bg-white md:hidden transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
       >
         <div 
           className={`absolute top-0 left-0 h-full w-64 bg-white shadow-xl transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
