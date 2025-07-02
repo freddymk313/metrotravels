@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { RiInstagramLine, RiFacebookFill, RiWhatsappLine, RiVisaLine, RiMastercardLine, RiPaypalLine, RiMailSendLine } from 'react-icons/ri';
+import { IoChevronForward } from "react-icons/io5";
 
 const Footer: React.FC = () => {
   return (
@@ -8,17 +9,17 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Logo + Description */}
-          <div className="space-y-6">
+          <div className="space-y-5 md:space-y-6">
             <div className="relative w-40 h-16">
               <Image 
-                src="/logo/logo.png" 
+                src="/logo/footer.png" 
                 alt="Metro Travels BHJ Logo" 
-                layout="fill"
-                objectFit="contain"
+                width={110}
+                height={40}
               />
             </div>
             <p className="text-gray-200">
-              Votre partenaire premium pour des expériences de voyage exceptionnelles depuis Lubumbashi.
+              Votre partenaire pour des expériences de voyage exceptionnelles depuis Lubumbashi.
             </p>
             <div className="flex gap-4">
               <a
@@ -55,7 +56,7 @@ const Footer: React.FC = () => {
                     href={`#${id}`}
                     className="text-gray-200 hover:text-white hover:underline transition-colors flex items-center gap-2"
                   >
-                    <span className="w-2 h-2 bg-[#FFD600] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <IoChevronForward className="text-[#FFD600] mr-1" />
                     {id.charAt(0).toUpperCase() + id.slice(1).replace('about', 'À propos')}
                   </a>
                 </li>
@@ -73,7 +74,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="text-gray-200 hover:text-white hover:underline transition-colors flex items-center gap-2"
                   >
-                    <span className="w-2 h-2 bg-[#FFD600] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <IoChevronForward className="text-[#FFD600] mr-1" />
                     {dest}
                   </a>
                 </li>
@@ -91,12 +92,12 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Votre email"
-                className="px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#FFD600]"
+                className="px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#FFD600] outiline-none border border-gray-300"
                 required
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all flex items-center justify-center gap-2"
               >
                 S'abonner <RiMailSendLine />
               </button>

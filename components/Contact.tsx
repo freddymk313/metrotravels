@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 text-gray-900 placeholder:text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
                     placeholder="Votre nom complet"
                     required
                   />
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-900 placeholder:text-gray-500"
                       placeholder="votre@email.com"
                       required
                     />
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-900 placeholder:text-gray-500"
                       placeholder="+243 XX XXX XX XX"
                     />
                   </div>
@@ -72,9 +72,9 @@ const Contact: React.FC = () => {
                   </label>
                   <select
                     id="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-900 placeholder:text-gray-300"
                   >
-                    <option value="">Sélectionnez un sujet</option>
+                    <option value="" className="placeholder:text-gray-500">Sélectionnez un sujet</option>
                     <option value="vol">Réservation de vol</option>
                     <option value="visa">Demande de visa</option>
                     <option value="package">Package voyage</option>
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all text-gray-900 placeholder:text-gray-500 outline-none"
                     placeholder="Décrivez votre projet de voyage..."
                     required
                   ></textarea>
@@ -138,8 +138,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-gray-800">Téléphone</h4>
-                    <p className="text-gray-600">+243 XXX XXX XXX</p>
-                    <p className="text-gray-600">+243 XXX XXX XXX</p>
+                    <p className="text-gray-600">+91 97245 95395</p>
+                    <p className="text-gray-600">+243 990 000 000</p>
                   </div>
                 </div>
 
@@ -150,7 +150,8 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-lg text-gray-800">Email</h4>
                     <p className="text-gray-600">contact@metrotravelsbhj.com</p>
-                    <p className="text-gray-600">reservations@metrotravelsbhj.com</p>
+                    <p className="text-gray-600">
+                    via.metrobhj@gmail.com</p>
                   </div>
                 </div>
               </div>
