@@ -19,8 +19,8 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Image src="/logo/logo.png" alt="Logo" width={110} height={40} />
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+        <Image src="/logo/logo.png" alt="Logo" width={100} height={40} />
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-3">
@@ -63,7 +63,7 @@ const Header = () => {
           }`}
         >
           <div className="flex justify-between items-center px-4 py-3 border-b">
-            <Image src="/logo/logo.png" alt="Logo" width={110} height={40} />
+            <Image src="/logo/logo.png" alt="Logo" width={100} height={40} />
             <button onClick={() => setIsOpen(false)} className="text-purple-700">
               <IoCloseOutline className="w-6 h-6" />
             </button>
@@ -75,7 +75,7 @@ const Header = () => {
                 key={section}
                 href={`#${section}`}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-800 font-medium py-2 px-3 rounded hover:bg-yellow-100"
+                className="text-gray-800 font-medium py-2 px-5 rounded-full hover:bg-yellow-100"
               >
                 {section === 'about' ? 'À propos' : section}
               </Link>

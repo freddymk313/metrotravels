@@ -41,7 +41,11 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-4">
             <a
-              href="#contact"
+              href={`https://wa.me/+919724595395?text=${encodeURIComponent(
+                `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services".`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
               <i className="ri-whatsapp-line ri-lg" />
@@ -49,7 +53,7 @@ const Hero: React.FC = () => {
             </a>
 
             <a
-              href="#services"
+              href="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <i className="ri-compass-3-line ri-lg" />

@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <Image 
                 src="/logo/footer.png" 
                 alt="Metro Travels BHJ Logo" 
-                width={110}
+                width={100}
                 height={40}
               />
             </div>
@@ -24,6 +24,8 @@ const Footer: React.FC = () => {
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/metrotravelsbhj/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#FFD600] hover:text-[#6D1A5F] transition-all"
                 aria-label="Instagram"
               >
@@ -31,13 +33,19 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="https://web.facebook.com/profile.php?id=61557847187646"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#FFD600] hover:text-[#6D1A5F] transition-all"
                 aria-label="Facebook"
               >
                 <RiFacebookFill className="text-xl" />
               </a>
               <a
-                href="#"
+                href={`https://wa.me/+919724595395?text=${encodeURIComponent(
+                  `Bonjour Metro Travels BHJ".`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#FFD600] hover:text-[#6D1A5F] transition-all"
                 aria-label="WhatsApp"
               >
