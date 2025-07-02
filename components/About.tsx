@@ -11,7 +11,7 @@ const About: React.FC = () => {
           <div className="lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
               <Image
-                src="/img/dubai.jpg"
+                src="/img/team.jpg"
                 alt="Équipe Metro Travels BHJ"
                 layout="fill"
                 objectFit="cover"
@@ -43,7 +43,7 @@ const About: React.FC = () => {
 
             <p className="text-lg text-gray-600 mb-6">
               Fondée à Lubumbashi, Metro Travels BHJ transforme les rêves de voyage en réalités depuis plus d'une décennie. 
-              Notre passion pour l'exploration et notre expertise locale nous permettent de créer des expériences uniques 
+              Notre passion pour l'exploration et notre expertise internationale nous permettent de créer des expériences uniques 
               qui vont bien au-delà des simples vacances.
             </p>
 
@@ -84,7 +84,7 @@ const About: React.FC = () => {
                 href="#services"
                 className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
               >
-                Nos Services Premium
+                Nos Services
               </a>
 
               <a

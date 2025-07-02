@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
                     placeholder="Votre nom complet"
                     required
                   />
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
                       placeholder="votre@email.com"
                       required
                     />
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
                       placeholder="+243 XX XXX XX XX"
                     />
                   </div>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                   </label>
                   <select
                     id="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none"
                   >
                     <option value="">Sélectionnez un sujet</option>
                     <option value="vol">Réservation de vol</option>
@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
                   className="flex items-center justify-center bg-[#25D366] text-white py-3 px-6 rounded-full font-semibold hover:shadow-lg transition-all gap-2"
                 >
                   <RiWhatsappLine className="text-xl" />
-                  Chat WhatsApp Instantané
+                  Chat WhatsApp
                 </a>
 
                 <div className="text-center text-sm text-gray-500">

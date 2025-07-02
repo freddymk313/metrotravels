@@ -23,7 +23,7 @@ const Header = () => {
         <Image src="/logo/logo.png" alt="Logo" width={110} height={40} />
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden md:flex items-center space-x-3">
           {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
             <Link
               key={section}
