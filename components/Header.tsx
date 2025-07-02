@@ -1,113 +1,101 @@
-"use client"
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { IoMenuOutline } from "react-icons/io5";
+import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
+  // Empêcher le scroll quand le menu est ouvert
   useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isOpen]);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-2' : 'bg-white/90 backdrop-blur-sm shadow-sm py-3'}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image 
-            src="/logo/logo.png" 
-            alt="Logo" 
-            width={230} 
-            height={90} 
-            className={`transition-all duration-300 ${scrolled ? 'h-12 w-auto' : 'h-14 w-auto'}`} 
-          />
-        </div>
-        
-        <nav className="hidden md:flex items-center space-x-6">
+    <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <Image src="/logo/logo.png" alt="Logo" width={120} height={50} />
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center space-x-4">
           {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
-            <Link 
-              key={section} 
-              href={`#${section}`} 
-              className="nav-link font-medium text-gray-700 hover:text-[#7B1F6B] transition-colors capitalize px-3 py-2 rounded-md hover:bg-[#F7A900]/10"
+            <Link
+              key={section}
+              href={`#${section}`}
+              className="text-gray-700 font-medium px-3 py-2 hover:text-purple-700 capitalize"
             >
-              {section.replace('about', 'À propos')}
+              {section === 'about' ? 'À propos' : section}
             </Link>
           ))}
-          <a 
-            href="#contact" 
-            className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+          <a
+            href="#contact"
+            className="bg-yellow-400 text-purple-700 px-5 py-2 rounded-full font-semibold hover:bg-yellow-500 transition"
           >
-            <i className="ri-whatsapp-line ri-lg" />
             Nous Contacter
           </a>
         </nav>
-        
+
+        {/* Mobile menu button */}
         <button
           onClick={() => setIsOpen(true)}
-          className="md:hidden text-[#6D1A5F] focus:outline-none w-10 h-10 flex items-center justify-center hover:bg-[#F7A900]/10 rounded-full"
+          className="md:hidden text-purple-700"
         >
-          <IoMenuOutline className='h-6 w-6' />
+          <IoMenuOutline className="w-7 h-7" />
         </button>
       </div>
-      
+
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-50 bg-white md:hidden transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+        className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
       >
-        <div 
-          className={`absolute top-0 left-0 h-full w-64 bg-white shadow-xl transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        {/* Sidebar */}
+        <div
+          className={`absolute top-0 left-0 w-64 h-full bg-white shadow-xl transform transition-transform duration-300 ${
+            isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
         >
-          <div className="p-4 flex justify-between items-center border-b border-gray-100">
-            <Image 
-              src="/logo/logo.png" 
-              alt="Logo" 
-              width={180} 
-              height={70} 
-              className="h-10 w-auto" 
-            />
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-[#6D1A5F] focus:outline-none w-10 h-10 flex items-center justify-center hover:bg-[#F7A900]/10 rounded-full"
-            >
-              <i className="ri-close-line ri-2x" />
+          <div className="flex justify-between items-center p-4 border-b">
+            <Image src="/logo/logo.png" alt="Logo" width={120} height={50} />
+            <button onClick={() => setIsOpen(false)} className="text-purple-700">
+              <IoCloseOutline className="w-6 h-6" />
             </button>
           </div>
-          
-          <div className="flex flex-col p-4">
+
+          <div className="flex flex-col p-4 space-y-3">
             {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
               <Link
                 key={section}
                 href={`#${section}`}
-                className="py-3 px-4 text-gray-700 font-medium hover:text-[#7B1F6B] hover:bg-[#F7A900]/10 transition-colors rounded-md"
                 onClick={() => setIsOpen(false)}
+                className="text-gray-800 font-medium py-2 px-3 rounded hover:bg-yellow-100"
               >
-                {section.replace('about', 'À propos')}
+                {section === 'about' ? 'À propos' : section}
               </Link>
             ))}
-            
             <a
               href="#contact"
-              className="mt-4 bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              className="mt-4 bg-yellow-400 text-purple-700 px-4 py-2 rounded-full font-semibold text-center hover:bg-yellow-500 transition"
             >
-              <i className="ri-whatsapp-line ri-lg" />
               Nous Contacter
             </a>
           </div>
         </div>
-        
+
         {/* Overlay */}
-        <div 
-          className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+        <div
+          className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${
+            isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
           onClick={() => setIsOpen(false)}
-        />
+        ></div>
       </div>
     </header>
   );
