@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                 src="/logo/footer.png" 
                 alt="Metro Travels BHJ Logo" 
                 width={100}
-                height={40}
+                height={36}
               />
             </div>
             <p className="text-gray-200">

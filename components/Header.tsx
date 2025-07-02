@@ -19,8 +19,8 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        <Image src="/logo/logo.png" alt="Logo" width={100} height={40} />
+      <div className="container mx-auto px-4 py-2.5 flex justify-between items-center">
+        <Image src="/logo/logo.png" alt="Logo" width={100} height={36} />
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-3">
@@ -62,8 +62,8 @@ const Header = () => {
             isOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex justify-between items-center px-4 py-3 border-b">
-            <Image src="/logo/logo.png" alt="Logo" width={100} height={40} />
+          <div className="flex justify-between items-center px-4 py-2.5 border-b">
+            <Image src="/logo/logo.png" alt="Logo" width={100} height={36} />
             <button onClick={() => setIsOpen(false)} className="text-purple-700">
               <IoCloseOutline className="w-6 h-6" />
             </button>
