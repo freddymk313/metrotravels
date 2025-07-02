@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Image src="/logo/logo.png" alt="Logo" width={120} height={50} />
+        <Image src="/logo/logo.png" alt="Logo" width={110} height={40} />
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-4">
@@ -58,12 +58,12 @@ const Header = () => {
       >
         {/* Sidebar */}
         <div
-          className={`absolute top-0 left-0 w-64 h-full bg-white shadow-xl transform transition-transform duration-300 ${
+          className={`absolute top-0 left-0 w-78 h-full bg-white shadow-xl transform transition-transform duration-300 ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex justify-between items-center p-4 border-b">
-            <Image src="/logo/logo.png" alt="Logo" width={120} height={50} />
+          <div className="flex justify-between items-center px-4 py-3 border-b">
+            <Image src="/logo/logo.png" alt="Logo" width={110} height={40} />
             <button onClick={() => setIsOpen(false)} className="text-purple-700">
               <IoCloseOutline className="w-6 h-6" />
             </button>
@@ -90,12 +90,12 @@ const Header = () => {
         </div>
 
         {/* Overlay */}
-        <div
+        {/* <div
           className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${
             isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
           onClick={() => setIsOpen(false)}
-        ></div>
+        ></div> */}
       </div>
     </header>
   );
