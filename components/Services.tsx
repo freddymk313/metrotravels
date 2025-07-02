@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaPlaneDeparture, FaPassport, FaSuitcaseRolling } from "react-icons/fa";
 import { RiFlightTakeoffLine, RiVisaLine, RiHotelLine } from "react-icons/ri";
+import { FiCheck } from 'react-icons/fi';
 
 const services = [
   {
@@ -72,7 +72,7 @@ const Services: React.FC = () => {
               <ul className="space-y-3 mb-8">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-[#FFD600] mt-1">•</span>
+                    <FiCheck className="text-[#FFD600] mt-1" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
