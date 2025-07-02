@@ -27,7 +27,7 @@ const Header = () => {
           {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
             <Link
               key={section}
-              href={`#${section}`}
+              href={`/${section}`}
               className="text-gray-700 font-medium px-3 py-2 hover:text-purple-700 capitalize"
             >
               {section === 'about' ? 'À propos' : section}
@@ -73,7 +73,7 @@ const Header = () => {
             {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
               <Link
                 key={section}
-                href={`#${section}`}
+                href={`/${section}`}
                 onClick={() => setIsOpen(false)}
                 className="text-gray-800 font-medium py-2 px-5 rounded-full hover:bg-yellow-100"
               >
