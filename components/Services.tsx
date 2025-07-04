@@ -116,7 +116,7 @@ const Services: React.FC = () => {
 
               <a
                 href={`https://wa.me/+919724595395?text=${encodeURIComponent(
-                  `Bonjour Metro Travels BHJ, j'aimerais " ${service.message}.`
+                  `Bonjour Metro Travels BHJ, j'aimerais ${service.message}.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

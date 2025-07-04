@@ -80,17 +80,17 @@ const destinations = [
     duration: "10 jours",
     category: "nature"
   },
-  // {
-  //   title: "Maroc",
-  //   subtitle: "Désert et médinas",
-  //   price: "$750",
-  //   image: "/img/maroc.png",
-  //   description: "Des souks colorés de Marrakech aux dunes du Sahara, une expérience sensorielle unique.",
-  //   rating: 4.5,
-  //   featured: false,
-  //   duration: "9 jours",
-  //   category: "culture"
-  // }
+  {
+    title: "Maroc",
+    subtitle: "Désert et médinas",
+    price: "$750",
+    image: "/img/maroc.png",
+    description: "Des souks colorés de Marrakech aux dunes du Sahara, une expérience sensorielle unique.",
+    rating: 4.5,
+    featured: false,
+    duration: "9 jours",
+    category: "culture"
+  }
 ];
 
 const Destinations: React.FC = () => {
@@ -155,7 +155,7 @@ const Destinations: React.FC = () => {
 
                 <a
                   href={`https://wa.me/+919724595395?text=${encodeURIComponent(
-                    `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur " ${dest.title}.`
+                    `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur  ${dest.title}.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

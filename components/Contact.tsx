@@ -43,22 +43,17 @@ const Contact: React.FC = () => {
 
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Nom complet */}
                   <div className="relative">
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
-                      placeholder=" "
+                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-700"
+                      placeholder="Nom complet *"
                       value={name}
-                      onChange={(e)=>setName(e.target.value)}
+                      onChange={(e) => setName(e.target.value)}
                       required
                     />
-                    <label 
-                      htmlFor="name" 
-                      className="absolute left-12 top-1/2 -translate-y-1/2 px-1 bg-white text-gray-500 transition-all duration-200 pointer-events-none peer-placeholder-shown:left-4 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:left-12 peer-focus:top-1/2 peer-focus:text-sm peer-focus:text-[#7B1F6B]"
-                    >
-                      Nom complet *
-                    </label>
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
@@ -66,22 +61,17 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
+                  {/* Email */}
                   <div className="relative">
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
-                      placeholder=" "
+                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-700"
+                      placeholder="Email *"
                       value={email}
-                      onChange={(e)=> setEmail(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <label 
-                      htmlFor="email" 
-                      className="absolute left-12 top-1/2 -translate-y-1/2 px-1 bg-white text-gray-500 transition-all duration-200 pointer-events-none peer-placeholder-shown:left-4 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:left-12 peer-focus:top-1/2 peer-focus:text-sm peer-focus:text-[#7B1F6B]"
-                    >
-                      Email *
-                    </label>
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -92,43 +82,36 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Téléphone */}
                   <div className="relative">
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
-                      placeholder=" "
+                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-700"
+                      placeholder="Téléphone"
                       value={phone}
-                      onChange={(e)=>setPhone(e.target.value)}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
-                    <label 
-                      htmlFor="phone" 
-                      className="absolute left-12 top-1/2 -translate-y-1/2 px-1 bg-white text-gray-500 transition-all duration-200 pointer-events-none peer-placeholder-shown:left-4 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:left-12 peer-focus:top-1/2 peer-focus:text-sm peer-focus:text-[#7B1F6B]"
-                    >
-                      Téléphone
-                    </label>
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
                       <RiPhoneLine className="text-xl" />
                     </div>
                   </div>
 
+                  {/* Sujet */}
                   <div className="relative">
                     <select
                       id="subject"
-                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none appearance-none peer"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none appearance-none text-gray-700"
+                      required
                     >
-                      <option value=""></option>
+                      <option value="">Sujet *</option>
                       <option value="vol">Réservation de vol</option>
                       <option value="visa">Demande de visa</option>
                       <option value="package">Package voyage</option>
                       <option value="autre">Autre demande</option>
                     </select>
-                    <label 
-                      htmlFor="subject" 
-                      className="absolute left-12 top-1/2 -translate-y-1/2 px-1 bg-white text-gray-500 transition-all duration-200 pointer-events-none peer-placeholder-shown:left-4 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:left-12 peer-focus:top-1/2 peer-focus:text-sm peer-focus:text-[#7B1F6B]"
-                    >
-                      Sujet
-                    </label>
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
@@ -137,22 +120,17 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Message */}
                 <div className="relative">
                   <textarea
                     id="message"
                     rows={5}
-                    className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
-                    placeholder=" "
+                    className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none text-gray-700 resize-none"
+                    placeholder="Votre message *"
                     value={message}
-                    onChange={(e)=> setMessage(e.target.value)}
+                    onChange={(e) => setMessage(e.target.value)}
                     required
                   ></textarea>
-                  <label 
-                    htmlFor="message" 
-                    className="absolute left-12 top-4 px-1 bg-white text-gray-500 transition-all duration-200 pointer-events-none peer-placeholder-shown:left-4 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:left-12 peer-focus:top-4 peer-focus:text-sm peer-focus:text-[#7B1F6B]"
-                  >
-                    Message *
-                  </label>
                   <div className="absolute left-4 top-4 text-gray-400">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd" />
@@ -160,6 +138,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Bouton d’envoi */}
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] hover:from-[#FFD600] hover:to-[#FFD600] text-[#6D1A5F] py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 group"
@@ -168,6 +147,7 @@ const Contact: React.FC = () => {
                   <RiSendPlaneLine className="text-xl group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
+
             </div>
           </div>
 
