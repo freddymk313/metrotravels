@@ -89,11 +89,7 @@ const Services: React.FC = () => {
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">Vous avez un projet de voyage spécifique ?</p>
           <a 
-            href={`https://wa.me/+919724595395?text=${encodeURIComponent(
-              `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services".`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact" 
             className="inline-block border-2 border-[#6D1A5F] text-[#6D1A5F] font-semibold px-8 py-3 rounded-full hover:bg-[#6D1A5F] hover:text-white transition-all"
           >
             En savoir plus
