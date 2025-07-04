@@ -80,17 +80,17 @@ const destinations = [
     duration: "10 jours",
     category: "nature"
   },
-  {
-    title: "Maroc",
-    subtitle: "Désert et médinas",
-    price: "$750",
-    image: "/img/maroc.png",
-    description: "Des souks colorés de Marrakech aux dunes du Sahara, une expérience sensorielle unique.",
-    rating: 4.5,
-    featured: false,
-    duration: "9 jours",
-    category: "culture"
-  }
+  // {
+  //   title: "Maroc",
+  //   subtitle: "Désert et médinas",
+  //   price: "$750",
+  //   image: "/img/maroc.png",
+  //   description: "Des souks colorés de Marrakech aux dunes du Sahara, une expérience sensorielle unique.",
+  //   rating: 4.5,
+  //   featured: false,
+  //   duration: "9 jours",
+  //   category: "culture"
+  // }
 ];
 
 const Destinations: React.FC = () => {
