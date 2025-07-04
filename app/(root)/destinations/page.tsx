@@ -86,7 +86,7 @@ const destinations = [
     title: 'Maroc',
     subtitle: 'Désert et médinas',
     price: '$750',
-    image: '/img/Maroc.jfif',
+    image: '/img/maroc.png',
     description: "Des souks colorés de Marrakech aux dunes du Sahara, une expérience sensorielle unique.",
     rating: 4.5,
     featured: false,
