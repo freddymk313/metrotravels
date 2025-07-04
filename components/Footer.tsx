@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                     className="text-gray-200 hover:text-white hover:underline transition-colors flex items-center gap-2"
                   >
                     <IoChevronForward className="text-[#FFD600] mr-1" />
-                    {/* {id.charAt(0).toUpperCase() + id.slice(1).replace('about', 'À propos')} */}
+                    {link.name}
                   </a>
                 </li>
               ))}

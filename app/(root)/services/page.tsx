@@ -1,52 +1,60 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { RiFlightTakeoffLine, RiVisaLine, RiHotelLine, RiCustomerService2Line } from "react-icons/ri";
-import { FiCheck } from 'react-icons/fi';
-import { FaConciergeBell } from 'react-icons/fa';
+import React from "react";
+import {
+  RiFlightTakeoffLine,
+  RiVisaLine,
+  RiHotelLine,
+  RiCustomerService2Line,
+} from "react-icons/ri";
+import { FiCheck } from "react-icons/fi";
+import { FaConciergeBell } from "react-icons/fa";
 
 const services = [
   {
     icon: <RiFlightTakeoffLine className="text-4xl" />,
     title: "Réservation de Vols",
-    description: "Accès exclusif aux meilleures compagnies aériennes avec des tarifs négociés spécialement pour vous.",
+    description:
+      "Accès exclusif aux meilleures compagnies aériennes avec des tarifs négociés spécialement pour vous.",
     features: [
       "Tarifs préférentiels jusqu'à -40%",
       "Assistance VIP 24h/24",
       "Modification flexible sans frais",
-      "Choix de sièges premium"
+      "Choix de sièges premium",
     ],
     button: "Réserver un Vol",
     highlight: "Économisez jusqu'à 40%",
-    message: "réservation un vol"
+    message: "réservation un vol",
   },
   {
     icon: <RiVisaLine className="text-4xl" />,
     title: "Assistance Visa",
-    description: "Service complet de gestion de visa avec un taux de réussite exceptionnel de 98%.",
+    description:
+      "Service complet de gestion de visa avec un taux de réussite exceptionnel de 98%.",
     features: [
       "Experts visa dédiés",
       "Dossier clé en main",
       "Suivi en temps réel",
-      "Accompagnement physique"
+      "Accompagnement physique",
     ],
     button: "Obtenir un Visa",
     highlight: "98% de réussite",
-    message: "avoir une assistance Visa"
+    message: "avoir une assistance Visa",
   },
   {
     icon: <RiHotelLine className="text-4xl" />,
     title: "Packages Premium",
-    description: "Expériences de voyage tout compris conçues par nos experts pour des souvenirs inoubliables.",
+    description:
+      "Expériences de voyage tout compris conçues par nos experts pour des souvenirs inoubliables.",
     features: [
       "Circuits exclusifs",
       "Hébergements 5* sélectionnés",
       "Services VIP inclus",
-      "Guide privé disponible"
+      "Guide privé disponible",
     ],
     button: "Découvrir nos Offres",
     highlight: "Expériences uniques",
-    message: "avoir plus d'information sur le packages premium"
+    message: "avoir plus d'information sur le packages premium",
   },
   // {
   //   icon: <FaConciergeBell className="text-4xl" />,
@@ -82,12 +90,15 @@ const ServicesPage: React.FC = () => {
               Services <span className="text-[#F7A900]">Premium</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une gamme complète de services haut de gamme pour transformer chaque voyage en une expérience exceptionnelle.
+              Une gamme complète de services haut de gamme pour transformer
+              chaque voyage en une expérience exceptionnelle.
             </p>
           </div>
         </section>
 
         {/* Section Services */}
+        <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+          <div className="container mx-auto px-4 text-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -125,22 +136,26 @@ const ServicesPage: React.FC = () => {
 
               <a
                 href={`https://wa.me/+919724595395?text=${encodeURIComponent(
-                  `Bonjour Metro Travels BHJ, j'aimerais " ${service.message}.`
+                  `Bonjour Metro Travels BHJ, j'aimerais " ${service.message}.`,
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all flex items-center justify-center gap-2 group-hover:from-[#FFD600] group-hover:to-[#FFD600] hover:scale-[1.02]">
+                className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all flex items-center justify-center gap-2 group-hover:from-[#FFD600] group-hover:to-[#FFD600] hover:scale-[1.02]"
+              >
                 {service.button}
                 <RiCustomerService2Line className="transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           ))}
         </div>
+            </div>
+        </section>  
 
-        <div className="mt-16 text-center">
+        <div className="container mx-auto px-4 mt-16 pb-16 text-center">
           <div className="inline-flex flex-col items-center">
             <p className="text-gray-600 mb-6 max-w-2xl">
-              Besoin d'un service ou d'un accompagnement personnalisé pour votre prochain voyage ?
+              Besoin d'un service ou d'un accompagnement personnalisé pour votre
+              prochain voyage ?
             </p>
             <a
               href="https://wa.me/+919724595395"
