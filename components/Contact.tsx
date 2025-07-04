@@ -1,8 +1,15 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { RiMapPinLine, RiPhoneLine, RiMailLine, RiWhatsappLine, RiSendPlaneLine, RiTimeLine } from 'react-icons/ri';
 import { FaHeadset, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
+
   return (
     <section id="contact" className="relative py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       {/* Élément décoratif */}
@@ -42,6 +49,8 @@ const Contact: React.FC = () => {
                       id="name"
                       className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
                       placeholder=" "
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                       required
                     />
                     <label 
@@ -63,6 +72,8 @@ const Contact: React.FC = () => {
                       id="email"
                       className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
                       placeholder=" "
+                      value={email}
+                      onChange={(e)=> setEmail(e.target.value)}
                       required
                     />
                     <label 
@@ -87,6 +98,8 @@ const Contact: React.FC = () => {
                       id="phone"
                       className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
                       placeholder=" "
+                      value={phone}
+                      onChange={(e)=>setPhone(e.target.value)}
                     />
                     <label 
                       htmlFor="phone" 
@@ -130,6 +143,8 @@ const Contact: React.FC = () => {
                     rows={5}
                     className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#7B1F6B] focus:border-transparent transition-all outline-none peer"
                     placeholder=" "
+                    value={message}
+                    onChange={(e)=> setMessage(e.target.value)}
                     required
                   ></textarea>
                   <label 
@@ -208,7 +223,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-lg text-gray-800 mb-1">Email</h4>
                     <div className="space-y-1">
-                      <p className="text-gray-600">bookings@metrotourism.co.in</p>
+                      <p className="text-gray-600">bookings@metrotourism.co.in</p> 
                       <p className="text-gray-600">via.metrobhj@gmail.com</p>
                     </div>
                   </div>
@@ -229,7 +244,7 @@ const Contact: React.FC = () => {
 
               <div className="mt-8 space-y-4">
                 <a
-                  href="https://wa.me/243XXXXXXXXX"
+                  href="https://wa.me/919724595395"
                   className="flex items-center justify-center bg-[#25D366] hover:bg-[#25D366]/90 text-white py-3 px-6 rounded-full font-bold hover:shadow-lg transition-all gap-3"
                 >
                   <RiWhatsappLine className="text-2xl" />
