@@ -245,10 +245,17 @@ const DestinationsPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-3">{dest.title}</h3>
                   <p className="text-gray-600 mb-5 line-clamp-2">{dest.description}</p>
 
-                  <button className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-4 rounded-full hover:shadow-md transition-all flex items-center justify-center gap-2">
+                  <a
+                    href={`https://wa.me/+919724595395?text=${encodeURIComponent(
+                      `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur " ${dest.title}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-4 rounded-full hover:shadow-md transition-all flex items-center justify-center gap-2"
+                  >
                     Voir les offres
                     <RiArrowRightLine className="transition-transform group-hover:translate-x-1" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
