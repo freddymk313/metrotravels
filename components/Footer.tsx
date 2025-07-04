@@ -3,6 +3,24 @@ import Image from 'next/image';
 import { RiInstagramLine, RiFacebookFill, RiWhatsappLine, RiVisaLine, RiMastercardLine, RiPaypalLine, RiMailSendLine } from 'react-icons/ri';
 import { IoChevronForward } from "react-icons/io5";
 
+const links = [
+  {
+    name: 'Accueil', href: "/"
+  },
+  {
+    name: 'Services', href: "/services"
+  },
+  {
+    name: 'destinations', href: "/destinations"
+  },
+  {
+    name: 'À propos', href: "/about"
+  },
+  {
+    name: 'Contact', href: "contact"
+  }
+]
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#6D1A5F] text-white pt-20 pb-12">
@@ -58,14 +76,14 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-bold mb-6 text-[#FFD600]">Navigation</h4>
             <ul className="space-y-4">
-              {['accueil', 'services', 'destinations', 'about', 'contact'].map((id) => (
-                <li key={id}>
+              {links.map((link, idx) => (
+                <li key={idx}>
                   <a
-                    href={`#${id}`}
+                    href={link.href}
                     className="text-gray-200 hover:text-white hover:underline transition-colors flex items-center gap-2"
                   >
                     <IoChevronForward className="text-[#FFD600] mr-1" />
-                    {id.charAt(0).toUpperCase() + id.slice(1).replace('about', 'À propos')}
+                    {/* {id.charAt(0).toUpperCase() + id.slice(1).replace('about', 'À propos')} */}
                   </a>
                 </li>
               ))}
@@ -76,7 +94,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-bold mb-6 text-[#FFD600]">Destinations</h4>
             <ul className="space-y-4">
-              {['Dubaï', 'Zanzibar', 'Turquie', 'Afrique du Sud', 'Europe', 'Asie'].map((dest) => (
+              {['Dubaï', 'Zanzibar', 'Turquie', 'Afrique du Sud', 'Japon', 'Islande'].map((dest) => (
                 <li key={dest}>
                   <a
                     href="#"
