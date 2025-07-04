@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       {/* Image de fond */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/img/hero.png"
+          src="/img/Zanzibar.jpg"
           alt="Voyage autour du monde"
           fill
           className="object-cover w-full h-full"
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <i className="ri-whatsapp-line ri-lg" />
+              {/* <i className="ri-whatsapp-line ri-lg" /> */}
               Contact WhatsApp
             </a>
 
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
               href="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <i className="ri-compass-3-line ri-lg" />
+              {/* <i className="ri-compass-3-line ri-lg" /> */}
               Nos Services
             </a>
           </div>

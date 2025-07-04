@@ -3,7 +3,25 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiMenu3Line, RiCloseLine, RiWhatsappLine } from 'react-icons/ri';
+import { RiCloseLine, RiWhatsappLine, RiMenuFill } from 'react-icons/ri';
+
+const links = [
+  {
+    name: 'Accueil', href: "/"
+  },
+  {
+    name: 'Services', href: "/services"
+  },
+  {
+    name: 'destinations', href: "/destinations"
+  },
+  {
+    name: 'À propos', href: "/about"
+  },
+  {
+    name: 'Contact', href: "contact"
+  }
+]
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,19 +45,21 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
-          {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
+          {links.map((link,idx) => (
             <Link
-              key={section}
-              href={`#${section}`}
-              className='text-[#6D1A5F] font-medium px-3 py-2 hover:text-purple-700 capitalize'
+              key={idx}
+              href={link.href}
+              className='text-[#6D1A5F] font-medium px-3 py-2 hover:text-[#6D1A5F]/80 capitalize'
             >
-              {section === 'about' ? 'À propos' : section}
+              {link.name}
             </Link>
           ))}
           <a
-            href={`https://wa.me/+243XXXXXXXXX?text=${encodeURIComponent("Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`https://wa.me/+919724595395?text=${encodeURIComponent(
+                `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services de voyage".`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
             className="ml-4 bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all flex items-center gap-2"
           >
             <RiWhatsappLine className="text-lg" />
@@ -53,7 +73,7 @@ const Header = () => {
           className="md:hidden text-[#6D1A5F] p-2 rounded-full hover:bg-[#FFD600]/10 transition-all"
           aria-label="Open menu"
         >
-          <RiMenu3Line className="w-6 h-6" />
+          <RiMenuFill className="w-6 h-6" />
         </button>
       </div>
 
@@ -87,19 +107,21 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col p-4 space-y-2">
-            {['accueil', 'services', 'destinations', 'about', 'contact'].map((section) => (
+            {links.map((link,idx) => (
               <Link
-                key={section}
-                href={`#${section}`}
+                key={idx}
+                href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-3 text-[#6D1A5F] font-medium rounded-lg hover:bg-[#FFD600]/10 transition-colors"
               >
-                {section === 'about' ? 'À propos' : section}
+                {link.name}
               </Link>
             ))}
 
             <a
-              href={`https://wa.me/+243XXXXXXXXX?text=${encodeURIComponent("Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services")}`}
+              href={`https://wa.me/+919724595395?text=${encodeURIComponent(
+                `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services de voyage".`
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"

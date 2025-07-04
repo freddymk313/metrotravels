@@ -15,7 +15,8 @@ const services = [
       "Choix de sièges premium"
     ],
     button: "Réserver un Vol",
-    highlight: "Économisez jusqu'à 40%"
+    highlight: "Économisez jusqu'à 40%",
+    message: "réservation un vol"
   },
   {
     icon: <RiVisaLine className="text-4xl" />,
@@ -28,7 +29,8 @@ const services = [
       "Accompagnement physique"
     ],
     button: "Obtenir un Visa",
-    highlight: "98% de réussite"
+    highlight: "98% de réussite",
+    message: "avoir une assistance Visa"
   },
   {
     icon: <RiHotelLine className="text-4xl" />,
@@ -41,7 +43,8 @@ const services = [
       "Guide privé disponible"
     ],
     button: "Découvrir nos Offres",
-    highlight: "Expériences uniques"
+    highlight: "Expériences uniques",
+    message: "avoir plus d'information sur le packages premium"
   },
   // {
   //   icon: <FaConciergeBell className="text-4xl" />,
@@ -112,10 +115,16 @@ const Services: React.FC = () => {
                 ))}
               </ul>
 
-              <button className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all flex items-center justify-center gap-2 group-hover:from-[#FFD600] group-hover:to-[#FFD600] hover:scale-[1.02]">
+              <a 
+                href={`https://wa.me/+919724595395?text=${encodeURIComponent(
+                `Bonjour Metro Travels BHJ, j'aimerais " ${service.message}.`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all flex items-center justify-center gap-2 group-hover:from-[#FFD600] group-hover:to-[#FFD600] hover:scale-[1.02]">
                 {service.button}
                 <RiCustomerService2Line className="transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
             </div>
           ))}
         </div>
@@ -126,7 +135,9 @@ const Services: React.FC = () => {
               Besoin d'un service sur mesure ou d'un accompagnement personnalisé pour votre prochain voyage ?
             </p>
             <a 
-              href="#contact" 
+              href="https://wa.me/+919724595395"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center border-2 border-[#6D1A5F] text-[#6D1A5F] font-semibold px-8 py-3 rounded-full hover:bg-[#6D1A5F] hover:text-white transition-all group"
             >
               Parler à un expert
