@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { RiTeamLine, RiMedalLine, RiGlobalLine } from 'react-icons/ri';
+import Link from 'next/link';
 
 const About: React.FC = () => {
   return (
@@ -80,19 +81,19 @@ const About: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#services"
+              <Link
+                href="/services"
                 className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
               >
                 Nos Services
-              </a>
+              </Link>
 
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="border-2 border-[#6D1A5F] text-[#6D1A5F] px-8 py-3 rounded-full font-semibold hover:bg-[#6D1A5F] hover:text-white transition-all"
               >
                 Rencontrer Notre Équipe
-              </a>
+              </Link>
             </div>
           </div>
         </div>

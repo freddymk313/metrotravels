@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
   return (
@@ -40,25 +41,22 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-4">
-            <a
-              href={`https://wa.me/+919724595395?text=${encodeURIComponent(
-                `Bonjour Metro Travels BHJ, j'aimerais en savoir plus sur vos services".`
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/destinations"
+              // alt="destinations page"
               className="bg-gradient-to-r from-[#FFD600] to-[#F7A900] text-[#6D1A5F] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
               {/* <i className="ri-whatsapp-line ri-lg" /> */}
-              Contact WhatsApp
-            </a>
+              Voir les destinations
+            </Link>
 
-            <a
+            <Link
               href="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
             >
               {/* <i className="ri-compass-3-line ri-lg" /> */}
               Nos Services
-            </a>
+            </Link>
           </div>
 
           {/* Statistiques */}
@@ -75,11 +73,6 @@ const Hero: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Flèche en bas */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <i className="ri-arrow-down-line ri-2x text-white opacity-70" />
       </div>
     </section>
   );
