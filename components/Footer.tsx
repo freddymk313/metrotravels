@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { RiInstagramLine, RiFacebookFill, RiWhatsappLine, RiVisaLine, RiMastercardLine, RiPaypalLine, RiMailSendLine } from 'react-icons/ri';
 import { IoChevronForward } from "react-icons/io5";
+import Link from 'next/link';
 
 const links = [
   {
@@ -18,6 +19,27 @@ const links = [
   },
   {
     name: 'Contact', href: "contact"
+  }
+]
+
+const destinationsFooter = [
+  {
+    name: 'Dubaï', href:"/destinations"
+  },
+  {
+    name: 'Zanzibar', href:"/destinations"
+  },
+  {
+    name: 'Turquie', href:"/destinations"
+  },
+  {
+    name: 'Afrique du Sud', href:"/destinations"
+  },
+  {
+    name: 'Japon', href: "/destinations"
+  },
+  {
+    name: 'Islande', href: "/destinations"
   }
 ]
 
@@ -94,15 +116,15 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-bold mb-6 text-[#FFD600]">Destinations</h4>
             <ul className="space-y-4">
-              {['Dubaï', 'Zanzibar', 'Turquie', 'Afrique du Sud', 'Japon', 'Islande'].map((dest) => (
-                <li key={dest}>
-                  <a
-                    href="#"
+              {destinationsFooter.map((dest, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={dest.href}
                     className="text-gray-200 hover:text-white hover:underline transition-colors flex items-center gap-2"
                   >
                     <IoChevronForward className="text-[#FFD600] mr-1" />
-                    {dest}
-                  </a>
+                    {dest.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -118,7 +140,7 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Votre email"
-                className="px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#FFD600] outiline-none border border-gray-300"
+                className="px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-[#FFD600] border border-gray-300 outline-none"
                 required
               />
               <button
