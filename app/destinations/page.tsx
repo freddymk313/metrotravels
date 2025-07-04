@@ -53,7 +53,7 @@ const destinations = [
     title: 'Maldives',
     subtitle: 'Honeymoon paradis',
     price: '$1,500',
-    image: '/img/maldives.jpg',
+    image: '/img/Maldives.png',
     description: "Villas sur pilotis, eaux turquoises et spa luxueux pour un séjour romantique inoubliable.",
     rating: 4.9,
     featured: true,
@@ -64,7 +64,7 @@ const destinations = [
     title: 'Japon',
     subtitle: 'Tradition et modernité',
     price: '$1,800',
-    image: '/img/japan.jpg',
+    image: '/img/Japon.jpg',
     description: "Découvrez Tokyo futuriste, les temples de Kyoto et les onsens traditionnels.",
     rating: 4.8,
     featured: true,
@@ -75,7 +75,7 @@ const destinations = [
     title: 'Islande',
     subtitle: 'Aurores boréales',
     price: '$1,600',
-    image: '/img/iceland.jpg',
+    image: '/img/Islande.webp',
     description: "Roadtrip entre glaciers, geysers et lagons bleus sous les aurores boréales.",
     rating: 4.7,
     featured: false,
@@ -86,7 +86,7 @@ const destinations = [
     title: 'Maroc',
     subtitle: 'Désert et médinas',
     price: '$750',
-    image: '/img/morocco.jpg',
+    image: '/img/Maroc.jfif',
     description: "Des souks colorés de Marrakech aux dunes du Sahara, une expérience sensorielle unique.",
     rating: 4.5,
     featured: false,
@@ -113,13 +113,13 @@ const DestinationsPage: React.FC = () => {
   });
 
   return (
-    <main className="pt-24 bg-gradient-to-b from-white to-gray-50 min-h-screen">
+    <div className="pt-14 md:pt-24 bg-gradient-to-b from-white to-gray-50 min-h-screen">
       <section className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="relative rounded-3xl overflow-hidden mb-16 h-96">
           <div className="absolute inset-0 bg-gradient-to-r from-[#7B1F6B]/90 to-transparent z-10" />
           <Image
-            src="/img/destinations-hero.jpg"
+            src="/img/destination-hero.webp"
             alt="Voyage autour du monde"
             layout="fill"
             objectFit="cover"
@@ -239,7 +239,7 @@ const DestinationsPage: React.FC = () => {
                       <RiMapPinLine className="mr-1" />
                       <span className="text-sm font-medium">{dest.subtitle}</span>
                     </div>
-                    <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">{dest.duration}</span>
+                    <span className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-full">{dest.duration}</span>
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-800 mb-3">{dest.title}</h3>
@@ -271,7 +271,7 @@ const DestinationsPage: React.FC = () => {
         )}
 
         {/* Pagination */}
-        {filteredDestinations.length > 0 && (
+        {/* {filteredDestinations.length > 0 && (
           <div className="mt-16 flex justify-center gap-2">
             <button className="w-10 h-10 flex items-center justify-center bg-white border border-gray-300 rounded-full hover:border-[#7B1F6B]">
               1
@@ -286,9 +286,9 @@ const DestinationsPage: React.FC = () => {
               <RiArrowRightLine />
             </button>
           </div>
-        )}
+        )} */}
       </section>
-    </main>
+    </div>
   );
 };
 
