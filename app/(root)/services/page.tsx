@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import { RiFlightTakeoffLine, RiVisaLine, RiHotelLine, RiCustomerService2Line } from "react-icons/ri";
 import { FiCheck } from 'react-icons/fi';
+import { FaConciergeBell } from 'react-icons/fa';
 
 const services = [
   {
@@ -60,25 +63,31 @@ const services = [
   // }
 ];
 
-const Services: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-      {/* Élément décoratif */}
-      <div className="absolute -right-40 -top-40 w-80 h-80 rounded-full bg-[#FFD600]/10 z-0"></div>
+    <>
+      {/* <Head>
+        <title>Services - Metro Travels BHJ</title>
+        <meta name="description" content="Découvrez nos services premium pour vos voyages : vols, visa, packages exclusifs et plus." />
+      </Head> */}
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block bg-[#FFD600]/20 text-[#6D1A5F] px-6 py-2 rounded-full text-sm font-semibold mb-4 *animate-bounce">
-            Excellence Voyage
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#6D1A5F] mb-4">
-            Nos <span className="text-[#F7A900]">Services Exclusifs</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Des solutions voyage haut de gamme conçues pour transformer chaque déplacement en expérience mémorable.
-          </p>
-        </div>
+      <div className="pt-14 md:pt-24 bg-white">
+        {/* En-tête */}
+        <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+          <div className="container mx-auto px-4 text-center">
+            <span className="inline-block bg-[#FFD600]/20 text-[#6D1A5F] px-6 py-2 rounded-full text-sm font-semibold mb-4">
+              Nos Solutions de Voyage
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#6D1A5F] mb-4">
+              Services <span className="text-[#F7A900]">Premium</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Une gamme complète de services haut de gamme pour transformer chaque voyage en une expérience exceptionnelle.
+            </p>
+          </div>
+        </section>
 
+        {/* Section Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -145,8 +154,8 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default Services;
+export default ServicesPage;
